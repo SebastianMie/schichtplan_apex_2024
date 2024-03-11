@@ -1,0 +1,2 @@
+-- exported with dbms_metadata.get_ddl
+create sequence  meldungen_mitarbeiter_seq  minvalue 0 maxvalue 9999999999999999999999999999 increment by 1 start with 4400 cache 20 noorder  nocycle  nokeep  noscale  global ;

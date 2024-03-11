@@ -1,0 +1,38 @@
+[1;30m2024-03-06 13:10:37[0m: [0;97mInstalling    [1;97minit 1.0.0[0m[0m
+[1;30m2024-03-06 13:10:37[0m: [0;97m----------------------------------------------------------[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mMode:         [1;97minit[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mVersion:      [1;97m1.0.0[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mLog File:     [1;97m20240306131037_dpl_init_1.0.0.log[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mExtract:      [1;97mTRUE[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mStepwise:     [1;97mNO[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97m----------------------------------------------------------[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mProject:             [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mApplication Schema:  [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mWorkspace:           [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mSchemas:             [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97m----------------------------------------------------------[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mChangelog Schema: [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:38[0m: [0;97mIntent Prefixes:  [1;97mFeat[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mIntent Names:     [1;97mFeatures[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mIntent Else:      [1;97mOthers[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mTicket Match:     [1;97m[A-Z]\+-[0-9]\+[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mTicket URL:       [1;97mhttps://url-to-your-issue-tracker-like-jira/browse[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97m----------------------------------------------------------[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mStage:               [1;97mmaster[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mDepot:               [1;97m_depot[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mApplication Offset:  [1;97m0[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mDeployment User:     [1;97mschichtplan[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97mDB Connection:       [1;97m10.100.103.78:1521/xepdb1[0m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97m----------------------------------------------------------[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97m[0m
+[1;30m2024-03-06 13:10:39[0m: [0;97m./init_1.0.0.tar.gz allready copied[0m
+[1;30m2024-03-06 13:10:40[0m: [0;97mextracting file ./init_1.0.0.tar.gz[0m
+[1;30m2024-03-06 13:10:40[0m: [0;97mdbFlow Versions matched[0m
+Enter Password for deployment user schichtplan on 10.100.103.78:1521/xepdb1: ***********
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8
+[1;41mError to connect to schema schichtplan[0m
+[0;31m
+  USER          = schichtplan
+  URL           = jdbc:oracle:thin:@10.100.103.78:1521/xepdb1
+  Fehlermeldung = ORA-01017: Benutzername/Kennwort ungültig; Anmeldung abgelehnt[0m
+❌ EXIT 2

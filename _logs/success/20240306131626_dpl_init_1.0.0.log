@@ -1,0 +1,229 @@
+2024-03-06 13:16:27: Installing    init 1.0.0
+2024-03-06 13:16:27: ----------------------------------------------------------
+2024-03-06 13:16:27: Mode:         init
+2024-03-06 13:16:27: Version:      1.0.0
+2024-03-06 13:16:27: Log File:     20240306131626_dpl_init_1.0.0.log
+2024-03-06 13:16:27: Extract:      TRUE
+2024-03-06 13:16:27: Stepwise:     NO
+2024-03-06 13:16:27: ----------------------------------------------------------
+2024-03-06 13:16:27: Project:             schichtplan
+2024-03-06 13:16:27: Application Schema:  schichtplan
+2024-03-06 13:16:27: Workspace:           schichtplan
+2024-03-06 13:16:28: Schemas:             schichtplan
+2024-03-06 13:16:28: ----------------------------------------------------------
+2024-03-06 13:16:28: Changelog Schema: schichtplan
+2024-03-06 13:16:28: Intent Prefixes:  Feat
+2024-03-06 13:16:28: Intent Names:     Features
+2024-03-06 13:16:28: Intent Else:      Others
+2024-03-06 13:16:28: Ticket Match:     [A-Z]\+-[0-9]\+
+2024-03-06 13:16:28: Ticket URL:       https://url-to-your-issue-tracker-like-jira/browse
+2024-03-06 13:16:28: ----------------------------------------------------------
+2024-03-06 13:16:28: Stage:               master
+2024-03-06 13:16:28: Depot:               _depot
+2024-03-06 13:16:28: Application Offset:  0
+2024-03-06 13:16:29: Deployment User:     schichtplan
+2024-03-06 13:16:29: DB Connection:       10.100.103.78:1521/xepdb1
+2024-03-06 13:16:29: ----------------------------------------------------------
+2024-03-06 13:16:29: 
+2024-03-06 13:16:29: ./init_1.0.0.tar.gz allready copied
+2024-03-06 13:16:29: extracting file ./init_1.0.0.tar.gz
+2024-03-06 13:16:29: dbFlow Versions matched
+Enter Password for deployment user schichtplan on 10.100.103.78:1521/xepdb1: ***********
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8
+Connection to schema schichtplan is working
+2024-03-06 13:16:44: Check if any file should be removed ...
+2024-03-06 13:16:44: No files to remove
+2024-03-06 13:16:44: INIT - Mode, Schemas will be cleared
+2024-03-06 13:16:44: DROPING ALL OBJECTS on schema schichtplan
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8
+
+dropping jobs
+.. 0 jobs(s) dropped
+
+PL/SQL-Prozedur erfolgreich abgeschlossen.
+Verstrichen: 00:00:00.939
+dropping objects
+PL/SQL-Prozedur erfolgreich abgeschlossen.
+Verstrichen: 00:00:00.701
+
+Recyclebin gelöscht.
+
+Verstrichen: 00:00:00.146
+
+objects left in schema
+
+Keine Zeilen ausgewählt
+Verstrichen: 00:00:00.098
+SQL> 2024-03-06 13:16:52: checking hook .hooks/pre
+2024-03-06 13:16:52: checking hook .hooks/pre/init
+2024-03-06 13:16:52: checking hook db/.hooks/pre
+2024-03-06 13:16:53: checking hook db/.hooks/pre/init
+2024-03-06 13:16:53: Start installing schemas
+2024-03-06 13:16:53: Installing schema schichtplan to schichtplan on 10.100.103.78:1521/xepdb1
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8
+
+..............................................................................
+..............................................................................
+.. Start Installation for schema: schichtplan
+..                       Version: init 1.0.0
+..............................................................................
+Installing .hooks/pre ...
+
+
+
+
+Installing sequences ...
+
+
+
+
+Installing tables ...
+
+
+
+
+Installing indexes/primaries ...
+
+
+
+
+Installing indexes/uniques ...
+
+
+
+
+Installing indexes/defaults ...
+
+
+
+
+Installing constraints/primaries ...
+
+
+
+
+Installing constraints/foreigns ...
+
+
+
+
+Installing constraints/checks ...
+
+
+
+
+Installing constraints/uniques ...
+
+
+
+
+Installing contexts ...
+
+
+
+
+Installing policies ...
+
+
+
+
+Installing sources/types ...
+
+
+
+
+Installing sources/packages ...
+
+
+
+
+Installing sources/functions ...
+
+
+
+
+Installing sources/procedures ...
+
+
+
+
+Installing views ...
+
+
+
+
+Installing mviews ...
+
+
+
+
+Installing sources/triggers ...
+
+
+
+
+Installing jobs ...
+
+
+
+
+Installing tests/packages ...
+
+
+
+
+Installing ddl ...
+
+
+
+
+Installing ddl/init ...
+
+
+
+
+Installing dml ...
+
+
+
+
+Installing dml/init ...
+
+
+
+
+Installing dml/base ...
+
+
+
+
+Installing .hooks/post ...
+
+
+
+
+compiling schema
+PL/SQL-Prozedur erfolgreich abgeschlossen.
+Verstrichen: 00:00:01.796
+PL/SQL-Prozedur erfolgreich abgeschlossen.
+Verstrichen: 00:00:00.059
+
+
+2024-03-06 13:17:05: checking hook db/.hooks/post
+2024-03-06 13:17:05: checking hook db/.hooks/post/init
+2024-03-06 13:17:05: File apex_files_1.0.0.lst does not exist
+2024-03-06 13:17:05: checking hook .hooks/post
+2024-03-06 13:17:05: checking hook .hooks/post/init
+2024-03-06 13:17:05: changelog found
+2024-03-06 13:17:05: templatefile found
+2024-03-06 13:17:05: changelog schema 'schichtplan' is configured
+Picked up JAVA_TOOL_OPTIONS: -Duser.language=en -Duser.region=US -Dfile.encoding=UTF-8
+
+executing changelog file changelog_init_1.0.0.md.sql
+ Uncomment and change table to upload your changelog!
+ ... Version info uploaded: 1.0.0
+
+PL/SQL-Prozedur erfolgreich abgeschlossen.
+2024-03-06 13:17:15: init 1.0.0 moved to /c/Users/sem/Dokumente/Workspace/Kunden/Projekte/Schichtplanung APEX 2024/schichtplanungstool_apex_2024/_depot/master/success/1.0.0
+2024-03-06 13:17:15: Done with success
+2024-03-06 13:17:16: No webhook_url specified.

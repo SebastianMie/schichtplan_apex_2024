@@ -1,0 +1,141 @@
+2024-03-06 13:08:24: Building init deployment version: 1.0.0
+2024-03-06 13:08:24: ----------------------------------------------------------
+2024-03-06 13:08:25: Mode:         init
+2024-03-06 13:08:25: Version       1.0.0
+2024-03-06 13:08:25: Log File:     20240306130824_bld_init_1.0.0.log
+2024-03-06 13:08:25: Branch:       master
+2024-03-06 13:08:25: ----------------------------------------------------------
+2024-03-06 13:08:25: Project              schichtplan
+2024-03-06 13:08:25: Application Schema:  schichtplan
+2024-03-06 13:08:25: Workspace:           schichtplan
+2024-03-06 13:08:25: Schemas:             (schichtplan)
+2024-03-06 13:08:25: ----------------------------------------------------------
+2024-03-06 13:08:25: Depotpath:     _depot/master
+2024-03-06 13:08:25: Targetpath:    _depot/master/init_1.0.0
+2024-03-06 13:08:25: Sourcepath:    .
+2024-03-06 13:08:26: Keepfolder:    FALSE
+2024-03-06 13:08:26: ----------------------------------------------------------
+2024-03-06 13:08:26: ----------------------------------------------------------
+2024-03-06 13:08:26: ----------------------------------------------------------
+2024-03-06 13:08:26:  ==== Checking Files and Folders ====
+2024-03-06 13:08:26:  
+2024-03-06 13:08:26: Creating directory /c/Users/sem/Dokumente/Workspace/Kunden/Projekte/Schichtplanung APEX 2024/schichtplanungstool_apex_2024/_depot/master/init_1.0.0
+2024-03-06 13:08:26: Copy all files ...
+2024-03-06 13:08:27:  
+2024-03-06 13:08:27:  ==== Checking Schemas schichtplan ====
+2024-03-06 13:08:27: 
+2024-03-06 13:08:27: 
+2024-03-06 13:08:27:  ==== Schema: schichtplan - /db/schichtplan/init_schichtplan_1.0.0.sql ====
+2024-03-06 13:08:27: 
+2024-03-06 13:08:27: Writing calls for .hooks/pre
+2024-03-06 13:08:27: Writing calls for sequences
+2024-03-06 13:08:28: Writing calls for tables
+2024-03-06 13:08:28: Writing calls for indexes/primaries
+2024-03-06 13:08:28: Writing calls for indexes/uniques
+2024-03-06 13:08:28: Writing calls for indexes/defaults
+2024-03-06 13:08:28: Writing calls for constraints/primaries
+2024-03-06 13:08:28: Writing calls for constraints/foreigns
+2024-03-06 13:08:28: Writing calls for constraints/checks
+2024-03-06 13:08:28: Writing calls for constraints/uniques
+2024-03-06 13:08:28: Writing calls for contexts
+2024-03-06 13:08:28: Writing calls for policies
+2024-03-06 13:08:29: Writing calls for sources/types
+2024-03-06 13:08:29: Writing calls for sources/packages
+2024-03-06 13:08:29: Writing calls for sources/functions
+2024-03-06 13:08:29: Writing calls for sources/procedures
+2024-03-06 13:08:29: Writing calls for views
+2024-03-06 13:08:29: Writing calls for mviews
+2024-03-06 13:08:29: Writing calls for sources/triggers
+2024-03-06 13:08:29: Writing calls for jobs
+2024-03-06 13:08:29: Writing calls for tests/packages
+2024-03-06 13:08:29: Writing calls for ddl
+2024-03-06 13:08:29: Writing calls for ddl/init
+2024-03-06 13:08:29: Writing calls for dml
+2024-03-06 13:08:29: Writing calls for dml/init
+2024-03-06 13:08:30: Writing calls for dml/base
+2024-03-06 13:08:30: Writing calls for .hooks/post
+2024-03-06 13:08:30: 
+2024-03-06 13:08:30:  ==== Checking APEX Applications ====
+2024-03-06 13:08:30: 
+2024-03-06 13:08:30: 
+2024-03-06 13:08:30:  ==== Checking REST Modules ====
+2024-03-06 13:08:30: 
+2024-03-06 13:08:30:  ... nothing found in modules 
+2024-03-06 13:08:30: 
+2024-03-06 13:08:31: Generating Changelog HEAD...V1.0.0 to changelog_init_1.0.0.md
+2024-03-06 13:08:32: Changelog written to changelog_init_1.0.0.md
+2024-03-06 13:08:32: ChangeLog generated: HEAD -- V1.0.0
+ |---------------------init_1.0.0
+ |-----------------------.gitignore
+ |-----------------------.hooks
+ |-------------------------post
+ |-------------------------pre
+ |-----------------------apex
+ |-----------------------build.env
+ |-----------------------db
+ |-------------------------.hooks
+ |---------------------------post
+ |---------------------------pre
+ |-------------------------schichtplan
+ |---------------------------.hooks
+ |-----------------------------post
+ |-----------------------------pre
+ |---------------------------constraints
+ |-----------------------------checks
+ |-----------------------------foreigns
+ |-----------------------------primaries
+ |-----------------------------uniques
+ |---------------------------contexts
+ |---------------------------ddl
+ |-----------------------------init
+ |-----------------------------patch
+ |-------------------------------post
+ |-------------------------------pre
+ |---------------------------dml
+ |-----------------------------base
+ |-----------------------------init
+ |-----------------------------patch
+ |-------------------------------post
+ |-------------------------------pre
+ |---------------------------indexes
+ |-----------------------------defaults
+ |-----------------------------primaries
+ |-----------------------------uniques
+ |---------------------------init_schichtplan_1.0.0.sql
+ |---------------------------jobs
+ |---------------------------mviews
+ |---------------------------policies
+ |---------------------------sequences
+ |---------------------------sources
+ |-----------------------------functions
+ |-----------------------------packages
+ |-----------------------------procedures
+ |-----------------------------triggers
+ |-----------------------------types
+ |---------------------------tables
+ |-----------------------------tables_ddl
+ |---------------------------tests
+ |-----------------------------packages
+ |---------------------------views
+ |-------------------------_setup
+ |---------------------------acls
+ |-----------------------------create_smtp_acls.sql
+ |---------------------------directories
+ |---------------------------features
+ |---------------------------tablespaces
+ |---------------------------users
+ |-----------------------------00_create_schichtplan.sql
+ |---------------------------workspaces
+ |-----------------------------instance_settings.sql
+ |-----------------------------schichtplan
+ |-------------------------------create_00_workspace.sql
+ |-------------------------------create_01_user_wsadmin.sql
+ |-----------------------------schichtplan_apex_2024
+ |-------------------------------create_00_workspace.sql
+ |-------------------------------create_01_user_wsadmin.sql
+ |-----------------------reports
+ |-------------------------changelog
+ |---------------------------template.sql
+ |-----------------------rest
+2024-03-06 13:08:33: 
+2024-03-06 13:08:33: ==== .......... .......... .......... ==== 
