@@ -163,7 +163,7 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY constraints_pkg as
             l_pause_35_count := l_pause_35_count + 1;
         else
             l_diff_hours := round((l_month_end - l_pause_startzeit) * 24); 
-            dbms_output.put_line('PAusendauer: '|| l_diff_hours || ' ' || to_char(l_month_end, 'DD.MM HH24:MI') || ' - ' || to_char(l_pause_startzeit, 'DD.MM HH24:MI'));
+            dbms_output.put_line('Pausendauer: '|| l_diff_hours || ' ' || to_char(l_month_end, 'DD.MM HH24:MI') || ' - ' || to_char(l_pause_startzeit, 'DD.MM HH24:MI'));
             if l_diff_hours >= 35 then
                 l_pause_35_count := l_pause_35_count + 1;
             end if;

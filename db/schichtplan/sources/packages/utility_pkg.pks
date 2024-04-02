@@ -4,7 +4,7 @@ procedure generate_dates_for_ma(
     p_datum_bis in date
 );
 
-procedure insert_rows_land_monat_limit;
+procedure insert_rows_laender_monat_limit;
 
 procedure insert_comments_for_all_days;
 

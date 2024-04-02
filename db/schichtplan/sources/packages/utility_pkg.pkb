@@ -57,7 +57,7 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
                   and land_id = land_rec.land_id;
 
                 if v_count = 0 then
-                   insert into laender_monat_limit (laender_monat_limit_id, monat_planung_id, land_id, limit_h)
+                   insert into laender_monat_limit (land_monat_limit_id, monat_planung_id, land_id, limit_h)
                    values (laender_monat_limit_seq.nextval, monat_rec.monat_planung_id, land_rec.land_id, null);
                 end if;
              end;
@@ -84,12 +84,12 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
           begin
             select count(*)
             into v_count
-            from kommentar
+            from kommentare
             where datum = to_date(to_char(monat, 'mon yyyy') || '-' || d, 'mon yyyy-dd');
 
             if v_count = 0 then
-              insert into kommentar (kommentar_id, datum, mitarbeiter_id, kommentar)
-              values (kommentar_seq.nextval,to_date(to_char(monat, 'mon yyyy') || '-' || d, 'mon yyyy-dd'), null, null);
+              insert into kommentare (kommentar_id, datum, mitarbeiter_id, kommentar)
+              values (kommentare_seq.nextval,to_date(to_char(monat, 'mon yyyy') || '-' || d, 'mon yyyy-dd'), null, null);
             end if;
           end;
         end loop;
@@ -157,18 +157,28 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
     end update_password_hash;
 
     function generate_password_hash (
-      p_password in varchar2,
-      p_salt in varchar2
-    ) return varchar2
-    is
-      l_hash varchar2(64);
-    begin
-      l_hash := dbms_obfuscation_toolkit.md5(input_string => p_password || p_salt);
-      return p_salt || l_hash;
-    exception
-      when others then
-        raise_application_error(-20001, 'An error was encountered - '||SQLCODE||' -ERROR- '||SQLERRM);
-    end generate_password_hash;
+      p_password IN VARCHAR2,
+      p_salt IN VARCHAR2
+    ) RETURN VARCHAR2
+    IS
+      l_hash_raw RAW(2000);
+      l_hash VARCHAR2(64);
+    BEGIN
+      -- Hashing the password with the salt using MD5 algorithm
+      l_hash_raw := DBMS_CRYPTO.HASH(
+                      src => UTL_I18N.STRING_TO_RAW(p_password || p_salt, 'AL32UTF8'),
+                      typ => DBMS_CRYPTO.HASH_MD5
+                    );
+
+      -- Converting the raw hash value to hexadecimal format
+      l_hash := LOWER(RAWTOHEX(l_hash_raw));
+
+      RETURN p_salt || l_hash;
+    EXCEPTION
+      WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20001, 'An error was encountered - ' || SQLCODE || ' - ERROR - ' || SQLERRM);
+    END generate_password_hash;
+
 
     procedure init_and_update_password_hashes
     is
@@ -198,8 +208,8 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
       l_monat := to_date(p_month, 'MON YYYY');
       select rs.bezeichnung
       into l_bezeichnung
-      from ref_status rs
-      join monat_planung mp on mp.ref_status_id = rs.ref_status_id
+      from status rs
+      join monat_planung mp on mp.status_id = rs.status_id
       where trunc(to_date(mp.monat_jahr, 'MON YYYY'),'MM') = trunc(l_monat, 'MM');
 
       return l_bezeichnung;
@@ -442,7 +452,7 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
 
         -- Wenn nicht, dann Datensatz einfügen
         if v_count = 0 then
-          insert into monat_planung (monat_jahr, ref_status_id)
+          insert into monat_planung (monat_jahr, status_id)
           values (to_char(v_current_month, 'MON YYYY'), 1);
         end if;
 

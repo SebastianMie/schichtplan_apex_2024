@@ -1,0 +1,18 @@
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('2',to_date('07.04.23','DD.MM.RR'),'Karfreitag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('3',to_date('10.04.23','DD.MM.RR'),'Ostermontag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('4',to_date('18.05.23','DD.MM.RR'),'Christi Himmelfahrt','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('5',to_date('29.05.23','DD.MM.RR'),'Pfingstmontag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('6',to_date('01.05.23','DD.MM.RR'),'Tag der Arbeit','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('7',to_date('03.10.23','DD.MM.RR'),'Tag der Deutschen Einheit','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('8',to_date('25.12.23','DD.MM.RR'),'1. Weihnachtsfeiertag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('9',to_date('26.12.23','DD.MM.RR'),'2. Weihnachtsfeiertag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('10',to_date('01.01.24','DD.MM.RR'),'Neujahr','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('11',to_date('19.04.24','DD.MM.RR'),'Karfreitag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('12',to_date('22.04.24','DD.MM.RR'),'Ostermontag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('13',to_date('30.05.24','DD.MM.RR'),'Christi Himmelfahrt','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('14',to_date('10.06.24','DD.MM.RR'),'Pfingstmontag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('15',to_date('20.06.24','DD.MM.RR'),'Fronleichnam','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('16',to_date('25.12.24','DD.MM.RR'),'1. Weihnachtsfeiertag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('17',to_date('26.12.24','DD.MM.RR'),'2. Weihnachtsfeiertag','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('1',to_date('01.01.23','DD.MM.RR'),'Neujahr','DE');
+insert into feiertage (feiertag_id,datum,bezeichnung,land) values ('45',to_date('26.12.23','DD.MM.RR'),'2. Weihnachtsfeiertag','PL');
