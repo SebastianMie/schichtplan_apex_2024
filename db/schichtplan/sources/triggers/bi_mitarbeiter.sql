@@ -1,10 +1,10 @@
-CREATE OR REPLACE EDITIONABLE TRIGGER bi_mitarbeiter 
-  before insert on "MITARBEITER"               
+create or replace editionable trigger bi_mitarbeiter 
+  before insert on mitarbeiter               
   for each row  
 begin   
-  if :NEW."MITARBEITER_ID" is null then 
-    select "MITARBEITER_SEQ".nextval into :NEW."MITARBEITER_ID" from sys.dual; 
+  if :new.mitarbeiter_id is null then 
+    select mitarbeiter_seq.nextval into :new.mitarbeiter_id from sys.dual; 
   end if; 
 end; 
 /
-ALTER TRIGGER bi_mitarbeiter ENABLE;
+alter trigger bi_mitarbeiter enable;

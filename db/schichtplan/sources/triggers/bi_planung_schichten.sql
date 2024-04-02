@@ -1,10 +1,10 @@
-CREATE OR REPLACE EDITIONABLE TRIGGER bi_planung_schichten 
-  before insert on "PLANUNG_SCHICHTEN"               
+create or replace editionable trigger bi_planung_schichten 
+  before insert on planung_schichten               
   for each row  
 begin   
-  if :NEW."PLANUNG_SCHICHTEN_ID" is null then 
-    select "PLANUNG_SCHICHTEN_SEQ".nextval into :NEW."PLANUNG_SCHICHTEN_ID" from sys.dual; 
+  if :new.planung_schichten_id is null then 
+    select planung_schichten_seq.nextval into :new.planung_schichten_id from sys.dual; 
   end if; 
 end; 
 /
-ALTER TRIGGER bi_planung_schichten ENABLE;
+alter trigger bi_planung_schichten enable;

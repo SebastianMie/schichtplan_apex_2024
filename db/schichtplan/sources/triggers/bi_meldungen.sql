@@ -1,10 +1,10 @@
-CREATE OR REPLACE EDITIONABLE TRIGGER bi_meldungen 
-  before insert on "MELDUNGEN"               
+create or replace editionable trigger bi_meldungen 
+  before insert on meldungen               
   for each row  
 begin   
-  if :NEW."MELDUNG_ID" is null then 
-    select "MELDUNGEN_SEQ".nextval into :NEW."MELDUNG_ID" from sys.dual; 
+  if :new.meldung_id is null then 
+    select meldungen_seq.nextval into :new.meldung_id from sys.dual; 
   end if; 
 end; 
 /
-ALTER TRIGGER bi_meldungen ENABLE;
+alter trigger bi_meldungen enable;

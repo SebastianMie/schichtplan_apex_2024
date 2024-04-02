@@ -41,24 +41,24 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
       end loop;
     end generate_dates_for_ma;
 
-    procedure insert_rows_land_monat_limit as
+    procedure insert_rows_laender_monat_limit as
     begin
        for monat_rec in (select distinct monat_planung_id from monat_planung)
        loop
-          for land_rec in (select land_id from land)
+          for land_rec in (select land_id from laender)
           loop
              declare
                 v_count number;
              begin
                 select count(*)
                 into v_count
-                from land_monat_limit
+                from laender_monat_limit
                 where monat_planung_id = monat_rec.monat_planung_id
                   and land_id = land_rec.land_id;
 
                 if v_count = 0 then
-                   insert into land_monat_limit (land_monat_limit_id, monat_planung_id, land_id, limit_h)
-                   values (land_monat_limit_seq.nextval, monat_rec.monat_planung_id, land_rec.land_id, null);
+                   insert into laender_monat_limit (laender_monat_limit_id, monat_planung_id, land_id, limit_h)
+                   values (laender_monat_limit_seq.nextval, monat_rec.monat_planung_id, land_rec.land_id, null);
                 end if;
              end;
           end loop;
@@ -68,7 +68,7 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY utility_pkg as
        when others then
           rollback;
           raise;
-    end insert_rows_land_monat_limit;
+    end insert_rows_laender_monat_limit;
 
     procedure insert_comments_for_all_days 
     as

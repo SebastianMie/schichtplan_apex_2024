@@ -6,4 +6,4 @@ create or replace force editionable view mitarbeiter_rollen_v (vorname, nachname
     m.rolle_id,
     r.bezeichnung
 from mitarbeiter m 
-join rolle r on r.rolle_id = m.rolle_id;
+join rollen r on r.rolle_id = m.rolle_id;
