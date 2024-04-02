@@ -1,0 +1,113 @@
+prompt --application/shared_components/navigation/lists/desktop_navigation_menu
+begin
+--   Manifest
+--     LIST: Desktop Navigation Menu
+--   Manifest End
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
+,p_default_workspace_id=>97227846552725811
+,p_default_application_id=>102
+,p_default_id_offset=>134035714542293292
+,p_default_owner=>'SCHICHTPLANUNG'
+);
+wwv_flow_imp_shared.create_list(
+ p_id=>wwv_flow_imp.id(98914948214580513)
+,p_name=>'Desktop Navigation Menu'
+,p_list_status=>'PUBLIC'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(98758263257580377)
+,p_list_item_display_sequence=>10
+,p_list_item_link_text=>'Startseite'
+,p_list_item_link_target=>'f?p=&APP_ID.:1:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-home'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(123064788453697765)
+,p_list_item_display_sequence=>22
+,p_list_item_link_text=>'Kalendar'
+,p_list_item_link_target=>'f?p=&APP_ID.:28:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-calendar-o'
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'28'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(109521837165440051)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>unistr('Monats\00FCbersicht')
+,p_list_item_link_target=>'f?p=&APP_ID.:25:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-table-wrench'
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(104227701413144833)
+,p_list_item_display_sequence=>40
+,p_list_item_link_text=>'Schichtplanung'
+,p_list_item_link_target=>'f?p=&APP_ID.:30:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-calendar-plus-o'
+,p_security_scheme=>wwv_flow_imp.id(98765686575580400)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_display_sequence=>50
+,p_list_item_link_text=>'Administration'
+,p_list_item_icon=>'fa-user'
+,p_security_scheme=>wwv_flow_imp.id(98765686575580400)
+,p_list_item_current_type=>'TARGET_PAGE'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(127467753926259646)
+,p_list_item_display_sequence=>60
+,p_list_item_link_text=>'Mitarbeiter'
+,p_list_item_link_target=>'f?p=&APP_ID.:40:&APP_SESSION.::&DEBUG.:::'
+,p_list_item_icon=>'fa-users'
+,p_parent_list_item_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'40'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(98335205124868779)
+,p_list_item_display_sequence=>80
+,p_list_item_link_text=>'Vorgabe Codes'
+,p_list_item_link_target=>'f?p=&APP_ID.:50:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-clipboard-list'
+,p_parent_list_item_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'50'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(95997811501321248)
+,p_list_item_display_sequence=>85
+,p_list_item_link_text=>'Schichtplanung Reports'
+,p_list_item_link_target=>'f?p=&APP_ID.:70:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-bar-chart'
+,p_parent_list_item_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'70'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(118467710087291031)
+,p_list_item_display_sequence=>90
+,p_list_item_link_text=>'Feiertage'
+,p_list_item_link_target=>'f?p=&APP_ID.:55:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-calendar-o'
+,p_parent_list_item_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'55'
+);
+wwv_flow_imp_shared.create_list_item(
+ p_id=>wwv_flow_imp.id(115628620997141844)
+,p_list_item_display_sequence=>100
+,p_list_item_link_text=>unistr('L\00E4nder Monat Limit')
+,p_list_item_link_target=>'f?p=&APP_ID.:65:&SESSION.::&DEBUG.::::'
+,p_list_item_icon=>'fa-list-ol'
+,p_parent_list_item_id=>wwv_flow_imp.id(127468788877586325)
+,p_list_item_current_type=>'COLON_DELIMITED_PAGE_LIST'
+,p_list_item_current_for_pages=>'65'
+);
+wwv_flow_imp.component_end;
+end;
+/
