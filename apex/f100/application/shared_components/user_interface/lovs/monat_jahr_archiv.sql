@@ -17,7 +17,7 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_lov_query=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select monat_jahr d, monat_jahr r',
 'from monat_planung',
-'where ref_status_id = 4 --Nur archivierte monate anzeigen',
+'where status_id = 4 --Nur archivierte monate anzeigen',
 'order by TO_DATE(monat_jahr, ''MON YYYY'') desc',
 ''))
 ,p_source_type=>'SQL'

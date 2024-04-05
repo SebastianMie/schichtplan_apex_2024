@@ -1,7 +1,7 @@
-prompt --application/shared_components/user_interface/lovs/service_team
+prompt --application/shared_components/user_interface/lovs/service_teams
 begin
 --   Manifest
---     SERVICE_TEAM
+--     SERVICE_TEAMS
 --   Manifest End
 wwv_flow_imp.component_begin (
  p_version_yyyy_mm_dd=>'2023.04.28'
@@ -13,11 +13,11 @@ wwv_flow_imp.component_begin (
 );
 wwv_flow_imp_shared.create_list_of_values(
  p_id=>wwv_flow_imp.id(98357458882947261)
-,p_lov_name=>'SERVICE_TEAM'
+,p_lov_name=>'SERVICE_TEAMS'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'
 ,p_use_local_sync_table=>false
-,p_query_table=>'SERVICE_TEAM'
+,p_query_table=>'SERVICE_TEAMS'
 ,p_return_column_name=>'SERVICE_TEAM_ID'
 ,p_display_column_name=>'BEEZEICHNUNG'
 ,p_group_sort_direction=>'ASC'

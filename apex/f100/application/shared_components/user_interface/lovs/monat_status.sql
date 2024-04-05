@@ -16,9 +16,11 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_lov_name=>'MONAT_STATUS'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'
-,p_query_table=>'REF_STATUS'
-,p_return_column_name=>'REF_STATUS_ID'
+,p_use_local_sync_table=>false
+,p_query_table=>'STATUS'
+,p_return_column_name=>'STATUS_ID'
 ,p_display_column_name=>'BEZEICHNUNG'
+,p_group_sort_direction=>'ASC'
 ,p_default_sort_column_name=>'BEZEICHNUNG'
 ,p_default_sort_direction=>'ASC'
 );

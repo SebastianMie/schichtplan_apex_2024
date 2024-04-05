@@ -535,8 +535,8 @@ unistr('  height: 100%; /* oder setzen Sie eine spezifische H\00F6he */'),
 ''))
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'18'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20240222160107'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403102920'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(109887220364054581)
@@ -1225,7 +1225,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P25_MONAT',
-'and ref_status_id = 4'))
+'and status_id = 4'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -1246,7 +1246,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P25_MONAT',
-'and ref_status_id = 3'))
+'and status_id = 3'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -1267,7 +1267,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P25_MONAT',
-'and ref_status_id = 1'))
+'and status_id = 1'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );

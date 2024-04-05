@@ -526,8 +526,8 @@ unistr('  height: 100%; /* oder setzen Sie eine spezifische H\00F6he */'),
 ''))
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'18'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20240228085622'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403143051'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(109888311019054592)
@@ -1203,7 +1203,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P30_MONAT',
-'and ref_status_id = 4'))
+'and status_id = 4'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -1224,7 +1224,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P30_MONAT',
-'and ref_status_id = 3'))
+'and status_id = 3'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -1245,19 +1245,7 @@ wwv_flow_imp_page.create_page_plug(
 'SELECT *',
 'FROM monat_planung',
 'WHERE monat_jahr = :P30_MONAT',
-'and ref_status_id = 1'))
-,p_attribute_01=>'N'
-,p_attribute_02=>'HTML'
-);
-wwv_flow_imp_page.create_page_plug(
- p_id=>wwv_flow_imp.id(99293594443398467)
-,p_plug_name=>'Seite Gesperrt '
-,p_region_name=>'notification_site_locked'
-,p_parent_plug_id=>wwv_flow_imp.id(131617792446390951)
-,p_region_template_options=>'#DEFAULT#:t-Alert--horizontal:t-Alert--defaultIcons:t-Alert--danger'
-,p_plug_template=>wwv_flow_imp.id(98889027425580487)
-,p_plug_display_sequence=>10
-,p_plug_source=>'&P30_SPERRE_INFO.'
+'and status_id = 1'))
 ,p_attribute_01=>'N'
 ,p_attribute_02=>'HTML'
 );
@@ -1503,23 +1491,6 @@ wwv_flow_imp_page.create_page_item(
 ,p_attribute_03=>'N'
 ,p_attribute_04=>'N'
 ,p_attribute_05=>'N'
-);
-wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(99293125291398463)
-,p_name=>'P30_SPERRE_INFO'
-,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(131617792446390951)
-,p_display_as=>'NATIVE_HIDDEN'
-,p_attribute_01=>'N'
-);
-wwv_flow_imp_page.create_page_item(
- p_id=>wwv_flow_imp.id(99291750059398449)
-,p_name=>'P30_SPERRE_MITARBEITER'
-,p_item_sequence=>10
-,p_item_plug_id=>wwv_flow_imp.id(131617792446390951)
-,p_use_cache_before_default=>'NO'
-,p_display_as=>'NATIVE_HIDDEN'
-,p_attribute_01=>'N'
 );
 wwv_flow_imp_page.create_page_item(
  p_id=>wwv_flow_imp.id(99081297603353255)
@@ -1852,11 +1823,11 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_action=>'NATIVE_EXECUTE_PLSQL_CODE'
 ,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'DECLARE',
-'   ref_status_id number; ',
+'   status_id number; ',
 'BEGIN',
 '',
 '   UPDATE monat_planung',
-'   SET ref_status_id = :P30_EDIT_MONAT_STATUS',
+'   SET status_id = :P30_EDIT_MONAT_STATUS',
 '   WHERE monat_jahr = :P30_MONAT; ',
 '',
 '   COMMIT; ',
@@ -1869,18 +1840,6 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_02=>'P30_EDIT_MONAT_STATUS,P30_MONAT'
 ,p_attribute_05=>'PLSQL'
 ,p_wait_for_result=>'Y'
-);
-wwv_flow_imp.component_end;
-end;
-/
-begin
-wwv_flow_imp.component_begin (
- p_version_yyyy_mm_dd=>'2023.04.28'
-,p_release=>'23.1.0'
-,p_default_workspace_id=>97227846552725811
-,p_default_application_id=>102
-,p_default_id_offset=>134035714542293292
-,p_default_owner=>'SCHICHTPLANUNG'
 );
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(100192765386627752)
@@ -1909,6 +1868,18 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_SUBMIT_PAGE'
 ,p_attribute_02=>'Y'
+);
+wwv_flow_imp.component_end;
+end;
+/
+begin
+wwv_flow_imp.component_begin (
+ p_version_yyyy_mm_dd=>'2023.04.28'
+,p_release=>'23.1.0'
+,p_default_workspace_id=>97227846552725811
+,p_default_application_id=>102
+,p_default_id_offset=>134035714542293292
+,p_default_owner=>'SCHICHTPLANUNG'
 );
 wwv_flow_imp_page.create_page_da_event(
  p_id=>wwv_flow_imp.id(99294196302398473)
@@ -2001,59 +1972,6 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_execute_on_page_init=>'N'
 ,p_action=>'NATIVE_SUBMIT_PAGE'
 ,p_attribute_02=>'Y'
-);
-wwv_flow_imp_page.create_page_da_event(
- p_id=>wwv_flow_imp.id(99292106572398453)
-,p_name=>'lockMatrix'
-,p_event_sequence=>210
-,p_bind_type=>'bind'
-,p_execution_type=>'IMMEDIATE'
-,p_bind_event_type=>'ready'
-,p_display_when_type=>'EXISTS'
-,p_display_when_cond=>'Select mitarbeiter_id from mitarbeiter_seite_sperre where mitarbeiter_id != :APP_USER;'
-);
-wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(99291631947398448)
-,p_event_id=>wwv_flow_imp.id(99292106572398453)
-,p_event_result=>'TRUE'
-,p_action_sequence=>10
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_JAVASCRIPT_CODE'
-,p_attribute_01=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'lock_matrix();',
-'console.log(''Matrix bearbeitung  sperren'')'))
-);
-wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(99291264417398444)
-,p_event_id=>wwv_flow_imp.id(99292106572398453)
-,p_event_result=>'TRUE'
-,p_action_sequence=>20
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_HIDE'
-,p_affected_elements_type=>'BUTTON'
-,p_affected_button_id=>wwv_flow_imp.id(131618485586390958)
-);
-wwv_flow_imp_page.create_page_process(
- p_id=>wwv_flow_imp.id(99291343892398445)
-,p_process_sequence=>10
-,p_process_point=>'BEFORE_HEADER'
-,p_process_type=>'NATIVE_PLSQL'
-,p_process_name=>'Init Seite gesperrt Info'
-,p_process_sql_clob=>wwv_flow_string.join(wwv_flow_t_varchar2(
-'DECLARE',
-'  p_sperre_info VARCHAR2(100);',
-'  p_sperre_mitarbeiter VARCHAR2(50);',
-'BEGIN',
-unistr(' p_sperre_info := utility_pkg.get_last_sperre_info(:APP_USER); -- Annahme: utility_pkg.get_last_sperre_info() gibt die Sperrinfo zur\00FCck'),
-'  :P30_SPERRE_INFO := p_sperre_info;',
-'   -- p_sperre_info := utility_pkg.get_last_sperre_info();',
-'    p_sperre_mitarbeiter := utility_pkg.get_last_sperre_ma();',
-'    :P30_SPERRE_MITARBEITER := p_sperre_mitarbeiter;',
-'END;',
-''))
-,p_process_clob_language=>'PLSQL'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
-,p_internal_uid=>34744370649894847
 );
 wwv_flow_imp.component_end;
 end;

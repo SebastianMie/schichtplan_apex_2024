@@ -19,8 +19,8 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20230726180933'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403105000'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(115753139751113781)
@@ -47,7 +47,7 @@ wwv_flow_imp_page.create_page_plug(
 '       lm.land_id,',
 '       lm.limit_h,',
 '       mp.monat_jahr',
-'from LAND_MONAT_LIMIT lm',
+'from LAENDER_MONAT_LIMIT lm',
 'join monat_planung mp on mp.monat_planung_id = lm.monat_planung_id',
 'where mp.monat_jahr = :P65_MONTH'))
 ,p_plug_source_type=>'NATIVE_IG'

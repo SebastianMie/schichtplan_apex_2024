@@ -28,7 +28,7 @@ wwv_flow_imp_shared.create_flow_process(
 '',
 '        SELECT bezeichnung, land ',
 '        INTO v_feiertag_bezeichnung, v_land',
-'        from ref_feiertag',
+'        from feiertage',
 '        WHERE TO_CHAR(datum, ''DD.MM.YYYY'') = p_datum;',
 '',
 '      APEX_JSON.OPEN_OBJECT;',

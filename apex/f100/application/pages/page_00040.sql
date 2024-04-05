@@ -21,8 +21,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'APK_ADM'
-,p_last_upd_yyyymmddhh24miss=>'20240220173418'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403144407'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(130862384400674847)
@@ -198,7 +198,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'MITARBEITER_ID'
 ,p_data_type=>'VARCHAR2'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_TEXT_FIELD'
 ,p_heading=>unistr('K\00FCrzel')
@@ -207,7 +206,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_value_alignment=>'LEFT'
 ,p_attribute_05=>'BOTH'
 ,p_is_required=>true
-,p_max_length=>8
+,p_max_length=>20
 ,p_enable_filter=>true
 ,p_filter_operators=>'C:S:CASE_INSENSITIVE:REGEXP'
 ,p_filter_is_required=>false
@@ -636,11 +635,10 @@ wwv_flow_imp_page.create_page_process(
 ' utility_pkg.generate_future_months();-- erstellt Monate 3 Jahre in die Zukunft',
 ' utility_pkg.generate_dates_for_ma(ADD_MONTHS(datum_bis, 36));-- Aktualisiert Planung_schichten Tabelle',
 unistr(' utility_pkg.init_and_update_password_hashes();-- intialisiert passw\00F6rter f\00FCr neue Mitarbeiter'),
-' utility_pkg.insert_rows_land_monat_limit();-- aktualisiert die land monat limits ',
+' utility_pkg.insert_rows_laender_monat_limit();-- aktualisiert die land monat limits ',
 unistr(' utility_pkg.insert_comments_for_all_days();-- initiallierst alle coments f\00FCr jeden m\00F6glichen Tag der Datenhaltung'),
 ' END;'))
 ,p_process_clob_language=>'PLSQL'
-,p_error_display_location=>'INLINE_IN_NOTIFICATION'
 ,p_internal_uid=>12072885082426713
 );
 wwv_flow_imp.component_end;

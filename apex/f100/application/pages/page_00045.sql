@@ -20,8 +20,8 @@ wwv_flow_imp_page.create_page(
 ,p_page_template_options=>'#DEFAULT#'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'02'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20240129170122'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403144530'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(127466424880244884)
@@ -170,7 +170,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_source=>'SERVICE_TEAM_ID'
 ,p_source_type=>'REGION_SOURCE_COLUMN'
 ,p_display_as=>'NATIVE_POPUP_LOV'
-,p_named_lov=>'SERVICE_TEAM'
+,p_named_lov=>'SERVICE_TEAMS'
 ,p_lov_display_null=>'YES'
 ,p_cSize=>30
 ,p_begin_on_new_line=>'N'

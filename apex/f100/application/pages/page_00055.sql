@@ -19,8 +19,8 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20230630123036'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403142013'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(46444321155756844)
@@ -31,7 +31,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_display_sequence=>10
 ,p_include_in_reg_disp_sel_yn=>'Y'
 ,p_query_type=>'TABLE'
-,p_query_table=>'REF_FEIERTAG'
+,p_query_table=>'FEIERTAGE'
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IG'
 ,p_prn_content_disposition=>'ATTACHMENT'
@@ -70,7 +70,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_source_type=>'DB_COLUMN'
 ,p_source_expression=>'FEIERTAG_ID'
 ,p_data_type=>'NUMBER'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_NUMBER_FIELD'
 ,p_heading=>'Feiertag ID'
@@ -79,7 +78,7 @@ wwv_flow_imp_page.create_region_column(
 ,p_value_alignment=>'RIGHT'
 ,p_attribute_03=>'right'
 ,p_attribute_04=>'text'
-,p_is_required=>false
+,p_is_required=>true
 ,p_enable_filter=>true
 ,p_filter_is_required=>false
 ,p_filter_lov_type=>'NONE'

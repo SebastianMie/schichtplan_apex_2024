@@ -24,8 +24,8 @@ wwv_flow_imp_page.create_page(
 ,p_dialog_max_width=>'200'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20230704154655'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403104450'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(127144067649831363)
@@ -136,11 +136,10 @@ wwv_flow_imp_page.create_region_column(
 );
 wwv_flow_imp_page.create_region_column(
  p_id=>wwv_flow_imp.id(127143071644831353)
-,p_name=>'REF_STATUS_ID'
+,p_name=>'STATUS_ID'
 ,p_source_type=>'DB_COLUMN'
-,p_source_expression=>'REF_STATUS_ID'
+,p_source_expression=>'STATUS_ID'
 ,p_data_type=>'VARCHAR2'
-,p_session_state_data_type=>'VARCHAR2'
 ,p_is_query_only=>false
 ,p_item_type=>'NATIVE_SELECT_LIST'
 ,p_heading=>'Status'

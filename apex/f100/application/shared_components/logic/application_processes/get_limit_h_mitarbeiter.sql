@@ -43,7 +43,7 @@ wwv_flow_imp_shared.create_flow_process(
 '      if p_monat_planung_id is not null then',
 '         select limit_h ',
 '         into p_limit_h',
-'         from land_monat_limit',
+'         from laender_monat_limit',
 '         where land_id = p_land_id',
 '         and monat_planung_id = p_monat_planung_id;',
 '      end if;',

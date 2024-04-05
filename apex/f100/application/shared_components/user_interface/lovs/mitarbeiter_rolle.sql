@@ -16,9 +16,11 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_lov_name=>'MITARBEITER_ROLLE'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'
-,p_query_table=>'ROLLE'
+,p_use_local_sync_table=>false
+,p_query_table=>'ROLLEN'
 ,p_return_column_name=>'ROLLE_ID'
 ,p_display_column_name=>'BEZEICHNUNG'
+,p_group_sort_direction=>'ASC'
 ,p_default_sort_column_name=>'BEZEICHNUNG'
 ,p_default_sort_direction=>'ASC'
 );

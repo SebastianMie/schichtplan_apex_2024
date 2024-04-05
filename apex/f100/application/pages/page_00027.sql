@@ -58,8 +58,8 @@ unistr('// Code zum Schlie\00DFen des Dialogs'),
 ,p_dialog_max_width=>'200'
 ,p_protection_level=>'C'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20231113135454'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240405094300'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(18656640095944800)
@@ -81,7 +81,7 @@ wwv_flow_imp_page.create_page_plug(
 ,p_plug_template=>wwv_flow_imp.id(98884152106580485)
 ,p_plug_display_sequence=>10
 ,p_query_type=>'TABLE'
-,p_query_table=>'KOMMENTAR'
+,p_query_table=>'KOMMENTARE'
 ,p_query_where=>'trunc(datum) = trunc(to_date(:P27_DATUM, ''DD.MM.YYYY''))'
 ,p_include_rowid_column=>false
 ,p_plug_source_type=>'NATIVE_IG'
@@ -272,7 +272,6 @@ wwv_flow_imp_page.create_interactive_grid(
 ,p_define_chart_view=>true
 ,p_enable_download=>false
 ,p_download_formats=>null
-,p_enable_mail_download=>true
 ,p_fixed_header=>'PAGE'
 ,p_show_icon_view=>false
 ,p_show_detail_view=>false

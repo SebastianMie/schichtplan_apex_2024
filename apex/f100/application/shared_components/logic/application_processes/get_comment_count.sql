@@ -26,7 +26,7 @@ wwv_flow_imp_shared.create_flow_process(
 '',
 'SELECT count(datum)',
 'INTO v_comment_count',
-'FROM kommentar',
+'FROM kommentare',
 'WHERE datum = TO_DATE(p_datum, ''DD.MM.YYYY'')',
 'AND kommentar IS NOT NULL;',
 '',

@@ -526,8 +526,8 @@ unistr('        //einfaerben_copied_row(); // Aktualisieren der Hintergrundfarbe
 '}'))
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'03'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20230705105235'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240403104807'
 );
 wwv_flow_imp_page.create_report_region(
  p_id=>wwv_flow_imp.id(12495746953036267)
@@ -1145,7 +1145,7 @@ wwv_flow_imp_page.create_page_item(
 ,p_lov=>wwv_flow_string.join(wwv_flow_t_varchar2(
 'select monat_jahr d, monat_jahr r',
 'from monat_planung',
-'where ref_status_id = 4 --Nur archivierte monate anzeigen',
+'where status_id = 4 --Nur archivierte monate anzeigen',
 'order by TO_DATE(monat_jahr, ''MON YYYY'') desc',
 ''))
 ,p_lov_display_null=>'YES'

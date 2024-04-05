@@ -16,9 +16,11 @@ wwv_flow_imp_shared.create_list_of_values(
 ,p_lov_name=>'LAENDER'
 ,p_source_type=>'TABLE'
 ,p_location=>'LOCAL'
-,p_query_table=>'LAND'
+,p_use_local_sync_table=>false
+,p_query_table=>'LAENDER'
 ,p_return_column_name=>'LAND_ID'
 ,p_display_column_name=>'BEZEICHNUNG'
+,p_group_sort_direction=>'ASC'
 ,p_default_sort_column_name=>'BEZEICHNUNG'
 ,p_default_sort_direction=>'ASC'
 );
