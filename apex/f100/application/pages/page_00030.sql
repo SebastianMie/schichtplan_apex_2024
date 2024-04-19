@@ -527,7 +527,7 @@ unistr('  height: 100%; /* oder setzen Sie eine spezifische H\00F6he */'),
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240403143051'
+,p_last_upd_yyyymmddhh24miss=>'20240419151445'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(109888311019054592)
@@ -916,7 +916,7 @@ wwv_flow_imp_page.create_report_region(
 ,p_lazy_loading=>false
 ,p_query_row_template=>wwv_flow_imp.id(98830315685580465)
 ,p_plug_query_max_columns=>20
-,p_query_headings=>'return planung_sum_h_matrix_pkg.get_polymorphic_headings_monat_sum_h;'
+,p_query_headings=>'return planung_sum_h_matrix_pkg.get_polymorphic_headings_monat_sum_h(:P30_MONAT);'
 ,p_query_headings_type=>'FUNCTION_BODY_RETURNING_COLON_DELIMITED_LIST'
 ,p_query_num_rows=>15
 ,p_query_options=>'GENERIC_REPORT_COLUMNS'
@@ -1417,6 +1417,7 @@ wwv_flow_imp_page.create_page_button(
 ,p_button_template_id=>wwv_flow_imp.id(98792645238580445)
 ,p_button_image_alt=>'Zeilen generieren'
 ,p_warn_on_unsaved_changes=>null
+,p_button_condition_type=>'NEVER'
 ,p_button_css_classes=>'btn-save'
 ,p_icon_css_classes=>'fa-table-plus'
 ,p_grid_new_row=>'N'
@@ -1909,16 +1910,6 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_wait_for_result=>'Y'
 );
 wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(99292595232398457)
-,p_event_id=>wwv_flow_imp.id(99294196302398473)
-,p_event_result=>'TRUE'
-,p_action_sequence=>30
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_REFRESH'
-,p_affected_elements_type=>'ITEM'
-,p_affected_elements=>'P30_MONAT'
-);
-wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(99293629228398468)
 ,p_event_id=>wwv_flow_imp.id(99294196302398473)
 ,p_event_result=>'TRUE'
@@ -1953,16 +1944,6 @@ wwv_flow_imp_page.create_page_da_action(
 ,p_attribute_04=>'N'
 ,p_attribute_05=>'PLSQL'
 ,p_wait_for_result=>'Y'
-);
-wwv_flow_imp_page.create_page_da_action(
- p_id=>wwv_flow_imp.id(99292620304398458)
-,p_event_id=>wwv_flow_imp.id(99293944173398471)
-,p_event_result=>'TRUE'
-,p_action_sequence=>20
-,p_execute_on_page_init=>'N'
-,p_action=>'NATIVE_REFRESH'
-,p_affected_elements_type=>'ITEM'
-,p_affected_elements=>'P30_MONAT'
 );
 wwv_flow_imp_page.create_page_da_action(
  p_id=>wwv_flow_imp.id(99293719351398469)

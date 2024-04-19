@@ -536,7 +536,7 @@ unistr('  height: 100%; /* oder setzen Sie eine spezifische H\00F6he */'),
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'18'
 ,p_last_updated_by=>'ADMIN'
-,p_last_upd_yyyymmddhh24miss=>'20240403102920'
+,p_last_upd_yyyymmddhh24miss=>'20240419151459'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(109887220364054581)
@@ -937,7 +937,7 @@ wwv_flow_imp_page.create_report_region(
 ,p_lazy_loading=>false
 ,p_query_row_template=>wwv_flow_imp.id(98830315685580465)
 ,p_plug_query_max_columns=>20
-,p_query_headings=>'return planung_sum_h_matrix_pkg.get_polymorphic_headings_monat_sum_h;'
+,p_query_headings=>'return planung_sum_h_matrix_pkg.get_polymorphic_headings_monat_sum_h(:P30_MONAT);'
 ,p_query_headings_type=>'FUNCTION_BODY_RETURNING_COLON_DELIMITED_LIST'
 ,p_query_num_rows=>15
 ,p_query_options=>'GENERIC_REPORT_COLUMNS'

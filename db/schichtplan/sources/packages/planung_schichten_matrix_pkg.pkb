@@ -1,4 +1,4 @@
-CREATE OR REPLACE EDITIONABLE PACKAGE BODY planung_schichten_matrix_pkg as
+create or replace PACKAGE BODY planung_schichten_matrix_pkg as
     
   -- Diese Prozedur gibt uns die Namen für die Spalten
   function describe (
@@ -163,10 +163,7 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY planung_schichten_matrix_pkg as
         order by datum asc ~';
     return l_pol_sql;
   end;
-  
-    -- Wir bauen hier den Select, der nachher in Apex gebaut wird.
-  -- Wir holen hart die wichtigen Werte aus den Zeilen (Usr_id und usr_name)
-  -- Des weiteren holen wir über get columns und den Separator , alle weiteren Rollen für den Select
+
   function get_matrix_day_sql(p_day varchar2) return varchar2
   is
     l_mitarbeiter constant varchar2(2000) := get_columns(p_seperator => ',');
@@ -180,19 +177,12 @@ CREATE OR REPLACE EDITIONABLE PACKAGE BODY planung_schichten_matrix_pkg as
         order by datum asc ~';
     return l_pol_sql;
   end;
- 
+
   function get_polymorphic_headings(p_monat varchar2)
     return varchar2
   is
   begin
     return 'Datum:'||get_columns(':',p_monat)||':6:7:9:14:22:12ab22:12ab10:&nbsp;';
-  end;
-  
-  function get_polymorphic_headings
-    return varchar2
-  is
-  begin
-    return 'Datum:'||get_columns(p_seperator => ':')||':6:7:9:14:22:12ab22:12ab10:&nbsp;';
   end;
 
 end planung_schichten_matrix_pkg;

@@ -557,8 +557,8 @@ unistr('                            currElement.css("background-color", "#94d778
 ''))
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'13'
-,p_last_updated_by=>'APK'
-,p_last_upd_yyyymmddhh24miss=>'20240126102733'
+,p_last_updated_by=>'ADMIN'
+,p_last_upd_yyyymmddhh24miss=>'20240419145541'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(127462677661244846)
@@ -730,24 +730,6 @@ wwv_flow_imp_page.create_region_column(
 ,p_is_primary_key=>false
 ,p_duplicate_value=>true
 ,p_include_in_export=>true
-);
-wwv_flow_imp_page.create_region_column(
- p_id=>wwv_flow_imp.id(123904352699009860)
-,p_name=>'SERVICE_TEAM_ID'
-,p_source_type=>'DB_COLUMN'
-,p_source_expression=>'SERVICE_TEAM_ID'
-,p_data_type=>'NUMBER'
-,p_session_state_data_type=>'VARCHAR2'
-,p_is_query_only=>false
-,p_item_type=>'NATIVE_HIDDEN'
-,p_display_sequence=>40
-,p_attribute_01=>'Y'
-,p_filter_is_required=>false
-,p_use_as_row_header=>false
-,p_enable_sort_group=>false
-,p_is_primary_key=>false
-,p_duplicate_value=>true
-,p_include_in_export=>false
 );
 wwv_flow_imp_page.create_region_column(
  p_id=>wwv_flow_imp.id(123904257969009859)
@@ -973,14 +955,6 @@ wwv_flow_imp_page.create_ig_report_column(
 ,p_width=>96
 );
 wwv_flow_imp_page.create_ig_report_column(
- p_id=>wwv_flow_imp.id(123021562865568905)
-,p_view_id=>wwv_flow_imp.id(123024712273568917)
-,p_display_seq=>4
-,p_column_id=>wwv_flow_imp.id(123904352699009860)
-,p_is_visible=>true
-,p_is_frozen=>false
-);
-wwv_flow_imp_page.create_ig_report_column(
  p_id=>wwv_flow_imp.id(123020612809568902)
 ,p_view_id=>wwv_flow_imp.id(123024712273568917)
 ,p_display_seq=>5
@@ -1183,7 +1157,7 @@ wwv_flow_imp_page.create_report_region(
 ,p_lazy_loading=>false
 ,p_query_row_template=>wwv_flow_imp.id(98830315685580465)
 ,p_plug_query_max_columns=>28
-,p_query_headings=>'return planung_schichten_matrix_pkg.get_polymorphic_headings;'
+,p_query_headings=>'return planung_schichten_matrix_pkg.get_polymorphic_headings(TO_CHAR(SYSDATE, ''MON YYYY''));'
 ,p_query_headings_type=>'FUNCTION_BODY_RETURNING_COLON_DELIMITED_LIST'
 ,p_query_num_rows=>50
 ,p_query_options=>'GENERIC_REPORT_COLUMNS'

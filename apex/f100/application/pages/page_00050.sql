@@ -19,8 +19,8 @@ wwv_flow_imp_page.create_page(
 ,p_autocomplete_on_off=>'OFF'
 ,p_page_template_options=>'#DEFAULT#'
 ,p_page_component_map=>'21'
-,p_last_updated_by=>'SEM'
-,p_last_upd_yyyymmddhh24miss=>'20230901160454'
+,p_last_updated_by=>'APK_ADM'
+,p_last_upd_yyyymmddhh24miss=>'20240419003740'
 );
 wwv_flow_imp_page.create_page_plug(
  p_id=>wwv_flow_imp.id(98355665427933083)
@@ -362,6 +362,9 @@ wwv_flow_imp_page.create_ig_report_column(
 ,p_is_visible=>true
 ,p_is_frozen=>false
 ,p_width=>68
+,p_sort_order=>1
+,p_sort_direction=>'ASC'
+,p_sort_nulls=>'LAST'
 );
 wwv_flow_imp_page.create_ig_report_column(
  p_id=>wwv_flow_imp.id(98331952103866425)
